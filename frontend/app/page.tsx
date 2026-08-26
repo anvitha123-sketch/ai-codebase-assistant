@@ -88,7 +88,7 @@ export default function Home() {
   // =========================================================
 
   useEffect(() => {
-    fetch("http://localhost:5000/")
+    fetch("https://ai-codebase-assistant-production-59c5.up.railway.app")
       .then((response) => response.json())
       .then((data) => {
         setBackendMessage(data.message);
@@ -117,7 +117,7 @@ export default function Home() {
       );
 
       const response = await fetch(
-        `http://localhost:5000/api/projects/${encodeURIComponent(
+        `https://ai-codebase-assistant-production-59c5.up.railway.app/api/projects/${encodeURIComponent(
           id
         )}/insights`,
         {
@@ -180,7 +180,7 @@ export default function Home() {
       );
 
       const response = await fetch(
-        `http://localhost:5000/api/projects/${encodeURIComponent(
+        `https://ai-codebase-assistant-production-59c5.up.railway.app/api/projects/${encodeURIComponent(
           id
         )}/architecture`,
         {
@@ -269,7 +269,7 @@ export default function Home() {
     );
 
     fetch(
-      "http://localhost:5000/api/projects/upload",
+      "https://ai-codebase-assistant-production-59c5.up.railway.app/api/projects/upload",
       {
         method: "POST",
         body: formData,
@@ -385,7 +385,7 @@ export default function Home() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/projects/github",
+        "https://ai-codebase-assistant-production-59c5.up.railway.app/api/projects/github",
         {
           method: "POST",
           headers: {
@@ -479,7 +479,7 @@ export default function Home() {
 
       const response =
         await fetch(
-          `http://localhost:5000/api/projects/${encodeURIComponent(
+          `https://ai-codebase-assistant-production-59c5.up.railway.app/api/projects/${encodeURIComponent(
             projectId
           )}/file?path=${encodeURIComponent(
             file
@@ -547,7 +547,7 @@ export default function Home() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/projects/${encodeURIComponent(
+        `https://ai-codebase-assistant-production-59c5.up.railway.app/api/projects/${encodeURIComponent(
           projectId
         )}/ask`,
         {
