@@ -13,7 +13,7 @@ const { GoogleGenAI } = require("@google/genai");
 const execFileAsync = promisify(execFile);
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 /* =========================================================
    GEMINI AI
