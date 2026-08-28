@@ -88,7 +88,7 @@ export default function Home() {
   // =========================================================
 
   useEffect(() => {
-    fetch("https://ai-codebase-assistant-production-59c5.up.railway.app")
+    fetch("https://ai-codebase-assistant-production-59c5.up.railway.app/api/health")
       .then((response) => response.json())
       .then((data) => {
         setBackendMessage(data.message);
